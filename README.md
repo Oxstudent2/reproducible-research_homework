@@ -24,10 +24,10 @@ In R studio a setting a seed creates a pseudo random number generator, and setti
  Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
 
  script was appropriately eidted and meged to the repo, changes can be seen in files under question 4 code
- https://github.com/hannahugboma/reproducible-research_homework/tree/main/question-4-code
+https://github.com/Oxstudent2/reproducible-research_homework/tree/main/question-4-code
 
  Go to your commit history and click on the latest commit. Show the edit you made to the code in the comparison view (add this image to the README.md of the fork). (5 points)
- ![image](https://github.com/hannahugboma/reproducible-research_homework/assets/150162434/eb8049d5-99d6-458c-8b03-05c84a1ef43f)
+ ![image](https://github.com/Oxstudent2/reproducible-research_homework/assets/150162434/eb8049d5-99d6-458c-8b03-05c84a1ef43f)
 
  
 
