@@ -40,12 +40,16 @@ https://github.com/Oxstudent2/reproducible-research_homework/tree/main/question-
 What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
 use a log transfomation on both aspects of the data, so
 
+```
 lm(log(genome_length_kb) ~ log(virion_volume_nm_nm_nm), virusdata1)
-
+```
 Write the code to reproduce the figure shown below. (10 points)
 code to reproduce figure:
-
-#install.packages('ggplot2') #install.packages('janitor') library(ggplot2) library janitor
+```
+install.packages('ggplot2')
+ install.packages('janitor')
+library(ggplot2)
+library janitor
 
 virusdata <- read.csv('Cui_etal2014.csv')
 
@@ -62,6 +66,7 @@ geom_point()+
 geom_smooth(method = 'lm')+
 
 theme_bw()
+```
 
 Bonus (10 points) Explain the difference between reproducibility and replicability in scientific research. How can git and GitHub be used to enhance the reproducibility and replicability of your work? what limitations do they have? (e.g. check the platform protocols.io).
 
