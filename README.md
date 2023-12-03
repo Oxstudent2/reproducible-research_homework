@@ -23,6 +23,9 @@ In R studio a setting a seed creates a pseudo random number generator, and setti
 
  Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
 
+   - Import the data for double-stranded DNA (dsDNA) viruses taken from the Supplementary Materials of the original paper into Posit Cloud (the csv file is in the `question-5-data` folder). How many rows and columns does the table have? (3 points)
+
+33 rows, 9 columns
 
 ## Instructions
 
