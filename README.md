@@ -5,6 +5,7 @@
 link to logistic growth repo:
 
 https://github.com/Oxstudent2/logistic_growth
+answers can be ofund in DEV 2 branch
 
 
 4) (**30 points**) Sometimes we are interested in modelling a process that involves randomness. A good example is Brownian motion. We will explore how to simulate a random process in a way that it is reproducible:
