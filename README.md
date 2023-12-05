@@ -44,30 +44,6 @@ use a log transfomation on both aspects of the data, so
 ```
 lm(log(genome_length_kb) ~ log(virion_volume_nm_nm_nm), virusdata1)
 ```
-Write the code to reproduce the figure shown below. (10 points)
-code to reproduce figure:
-```
-install.packages('ggplot2')
- install.packages('janitor')
-library(ggplot2)
-library janitor
-
-virusdata <- read.csv('Cui_etal2014.csv')
-
-virusdata1 <- clean_names(virusdata)
-
-log_virusdata <- lm(genome_length_kb ~ log(virion_volume_nm_nm_nm), virusdata1)
-
-ggplot(logVirusdata, aes(x = log.virusdata1.genome_length_kb., y = log.virusdata1.virion_volume_nm_nm_nm.))+
-
-labs(x = 'log[Genome length(kb)]', y = 'log[Viron volume (nm3)]')+
-
-geom_point()+
-
-geom_smooth(method = 'lm')+
-
-theme_bw()
-```
 
 Find the exponent and scaling factor of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in Table 2 of the paper, did you find the same values? (10 points)
 
@@ -96,6 +72,40 @@ Therefore the scaling factor is 6.213
 Unsure of the confidence intervals involved here, however it is significantly lower than the value obtained by Cui et al, which was 1,182 for dsDNA – unsure how this result could have been obtained, they may not have used log values as I have.
 
 Both the exponnet and scaling factor i caclulated were different than that obtained from the paper, hnece indicating some difference in calculation/method, or numbers in the first place
+
+Write the code to reproduce the figure shown below. (10 points)
+code to reproduce figure:
+```
+install.packages('ggplot2')
+ install.packages('janitor')
+library(ggplot2)
+library janitor
+
+virusdata <- read.csv('Cui_etal2014.csv')
+
+virusdata1 <- clean_names(virusdata)
+
+log_virusdata <- lm(genome_length_kb ~ log(virion_volume_nm_nm_nm), virusdata1)
+
+ggplot(logVirusdata, aes(x = log.virusdata1.genome_length_kb., y = log.virusdata1.virion_volume_nm_nm_nm.))+
+
+labs(x = 'log[Genome length(kb)]', y = 'log[Viron volume (nm3)]')+
+
+geom_point()+
+
+geom_smooth(method = 'lm')+
+
+theme_bw()
+```
+What is the estimated volume of a 300 kb dsDNA virus? (4 points)
+
+using the estimates I calculated above:
+
+6.213(300)^0.4708
+
+ = 34.65 nm3 in volume
+
+
 
 
 
