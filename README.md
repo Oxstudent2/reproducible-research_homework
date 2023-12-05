@@ -38,6 +38,7 @@ https://github.com/Oxstudent2/reproducible-research_homework/tree/main/question-
 33 rows, 9 columns
 
 What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
+
 use a log transfomation on both aspects of the data, so
 
 ```
