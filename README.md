@@ -78,14 +78,21 @@ summary(log_virusdata2)
 ```
 The slope is given in the summary of the log virus data as 0.4708, with at t value of -2.859 and a p value of 6.44e-10, which much lower than the 0.005 significance value, therefore this result for the slope and therefore exponent is significant. The confidence intervals around the slope where 0.36 and 0.58. How does this value differ from that in the table in the paper by Cui et al? their value was 1.52, much greater than the value I found. 
 Regarding the scaling factor beta, I can find it mathematically having now found the slope using a specific data point.
-
+```
 V = BL^a
+```
  Using example from the log data
+```
 12.68 = B(4.55)^0.4708
+```
  rearrange
-12.68/(4.55)^0.4708 = B
+```
+12.68/(4.55)^0.4708
+```
 B = 6.213
 Therefore the scaling factor is 6.213
+
+
 Unsure of the confidence intervals involved here, however it is significantly lower than the value obtained by Cui et al, which was 1,182 for dsDNA – unsure how this result could have been obtained, they may not have used log values as I have.
 
 Both the exponnet and scaling factor i caclulated were different than that obtained from the paper, hnece indicating some difference in calculation/method, or numbers in the first place
