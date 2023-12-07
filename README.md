@@ -64,7 +64,6 @@ Regarding the scaling factor beta, I can find it mathematically by substituting 
 ```
 V = BL^a
 ```
-```
  when inputting gradinet and the first peice of known data, V = 12.68, L = 4.55
 I can substitute V, viron volume and L, genome length into this equation
 ```
@@ -75,7 +74,7 @@ Now i need to rearrange this equation to solve for X
 12.68/4.55^152
 ```
 Gives the result 1.267
-```
+
 The exponent I calculated was the same as that found by Cui et al, and was within a 95% signifcance level, therefre this model was significant, however The scaling factor value I calsulated was different, signifcantly lower than the 1,182 found in the table
 
 Write the code to reproduce the figure shown below. (10 points)
