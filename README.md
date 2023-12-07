@@ -121,7 +121,10 @@ Additionally, as a free platform its accessible to labs of all levels and budget
 
 It creates a more collaborative and open source of information, and this open nature allows more people to access and check the reproducibility and validness of specific methods used to obtain a hypothesis and the validity of the overall conclusion. 
 
-Regarding limitations of git and approaches using git and version control include a lack of frame works and help for data publishing regarding the data collected, and centralized data storage systems can be lost due to faults if the system goes offline for a period. However, the ease of access to data and the tracking of changes make it extremely useful to tracking changes and ensuring maximum reproducibility and replicability
+limitations of git include a lack of frame works and help for data publishing regarding the data collected, and centralized data storage systems can be lost due to faults if the system goes offline for a period.
+The public nature of github means data can be shared but also potentialy stolen and coopted without cretid, which can harm scientists work and lower their standing/reputation. Furthermore, if you have an extremely large dataset it may not be shared on github, as it has a size limit of 50mb for files uploaded to rpeositories. therefore, larger datasets unfortunately cannot be shared.
+
+However, the ease of access to data and the tracking of changes make it extremely useful to tracking changes and ensuring maximum reproducibility and replicability, and in cases where the data is les sthan 50mb, is extremely helpful.
 
 ## Instructions
 
