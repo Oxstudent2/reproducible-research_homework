@@ -52,6 +52,14 @@ The exponent (alpha) in an allometric model like this one show how the parameter
 log_virusdata2 <- lm(log(genome_length_kb) ~ log(virion_volume_nm_nm_nm), virusdata1)
 summary(log_virusdata2)
 ```
+A summary of this model gives an output of:
+```
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                  -2.1060     0.7366  -2.859  0.00753 ** 
+log(virion_volume_nm_nm_nm)   0.4708     0.0536   8.784 6.44e-10 ***
+---
+```
 The slope is given in the summary of the log virus data as 0.4708, with at t value of -2.859 and a p value of 6.44e-10, which much lower than the 0.005 significance value, therefore this result for the slope and therefore exponent is significant. The confidence intervals around the slope where 0.36 and 0.58. How does this value differ from that in the table in the paper by Cui et al? their value was 1.52, much greater than the value I found. 
 Regarding the scaling factor beta, I can find it mathematically having now found the slope using a specific data point.
 ```
