@@ -42,44 +42,41 @@ What transformation can you use to fit a linear model to the data? Apply the tra
 use a log transfomation on both aspects of the data, so
 
 ```
-lm(log(genome_length_kb) ~ log(virion_volume_nm_nm_nm), virusdata1)
+lm(log(virion_volume_nm_nm_nm) ~ log(genome_length_kb), virusdata1)
 ```
 
 Find the exponent and scaling factor of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in Table 2 of the paper, did you find the same values? (10 points)
 
-The exponent (alpha) in an allometric model like this one show how the parameter Y differs regarding parameter X – hence it is represented by the slope. The slope of the dsDNA can be worked out form the log linear model I created (I am using the log transformed data as this is what I used to make it fit the linear model):
+The exponent (alpha) in an allometric model shows how the parameter Y differs regarding parameter X, and the change seen across x and y – hence it is represented by the slope. The slope of the dsDNA can be worked out form the log linear model I created (I am using the log transformed data as this is what I used to make it fit the linear model):
 ```
-log_virusdata2 <- lm(log(genome_length_kb) ~ log(virion_volume_nm_nm_nm), virusdata1)
+log_virusdata2 <- lm(log(virion_volume_nm_nm_nm) ~ log(genome_length_kb), virusdata1)
 summary(log_virusdata2)
 ```
 A summary of this model gives an output of:
 ```
-Coefficients:
-                            Estimate Std. Error t value Pr(>|t|)    
-(Intercept)                  -2.1060     0.7366  -2.859  0.00753 ** 
-log(virion_volume_nm_nm_nm)   0.4708     0.0536   8.784 6.44e-10 ***
----
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             7.0748     0.7693   9.196 2.28e-10 ***
+log(genome_length_kb)   1.5152     0.1725   8.784 6.44e-10 ***
+
 ```
-The slope is given in the summary of the log virus data as 0.4708, with at t value of -2.859 and a p value of 6.44e-10, which much lower than the 0.005 significance value, therefore this result for the slope and therefore exponent is significant. The confidence intervals around the slope where 0.36 and 0.58. How does this value differ from that in the table in the paper by Cui et al? their value was 1.52, much greater than the value I found. 
-Regarding the scaling factor beta, I can find it mathematically having now found the slope using a specific data point.
+The slope is given in the summary of the log virus data as 1.52, with a p value of 6.44e-10, which much lower than the 0.005 significance value, therefore this result for the slope and therefore exponent is significant. How does this value differ from that in the table in the paper by Cui et al? their value was aslo 1.52.
+Regarding the scaling factor beta, I can find it mathematically by substituting in the intercept gained (7.0738) into a linear model with the gradient, and using this to fully determine the scaling factor
 ```
 V = BL^a
 ```
- Using example from the log data
 ```
-12.68 = B(4.55)^0.4708
+ when inputting gradinet and the first peice of known data, V = 12.68, L = 4.55
+I can substitute V, viron volume and L, genome length into this equation
 ```
- rearrange
+12.68 = X4.55^1.52
 ```
-12.68/(4.55)^0.4708
+Now i need to rearrange this equation to solve for X
 ```
-B = 6.213
-Therefore the scaling factor is 6.213
-
-
-Unsure of the confidence intervals involved here, however it is significantly lower than the value obtained by Cui et al, which was 1,182 for dsDNA – unsure how this result could have been obtained, they may not have used log values as I have.
-
-Both the exponnet and scaling factor i caclulated were different than that obtained from the paper, hnece indicating some difference in calculation/method, or numbers in the first place
+12.68/4.55^152
+```
+Gives the result 1.267
+```
+The exponent I calculated was the same as that found by Cui et al, and was within a 95% signifcance level, therefre this model was significant, however The scaling factor value I calsulated was different, signifcantly lower than the 1,182 found in the table
 
 Write the code to reproduce the figure shown below. (10 points)
 code to reproduce figure:
