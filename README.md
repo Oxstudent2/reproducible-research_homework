@@ -2,7 +2,7 @@
 
 \# INSERT ANSWERS HERE #
 
-link to logistic growth repo:
+link to logistic growth repo and answers to questions 1,2,3:
 
 https://github.com/Oxstudent2/logistic_growth/tree/dev2
 
