@@ -103,16 +103,12 @@ theme_bw()
 ```
 What is the estimated volume of a 300 kb dsDNA virus? (4 points)
 
-using the estimates I calculated above:
+Using the values for scaling factor and exponent from Cui et al:
 
-6.213(300)^0.4708
-
- = 34.65 nm3 in volume
-
-
-
-
-
+```
+1182*300^1.52
+```
+ =  6884015nm3 in volume
 
 Bonus (10 points) Explain the difference between reproducibility and replicability in scientific research. How can git and GitHub be used to enhance the reproducibility and replicability of your work? what limitations do they have? (e.g. check the platform protocols.io).
 
